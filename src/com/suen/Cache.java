@@ -1,6 +1,7 @@
 package com.suen;
 
 import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created by Suen on 2018/2/20.
@@ -55,5 +56,7 @@ public class Cache {
         cache.put("b",4);
 
         System.out.println(cache.get("a"));
+
+
     }
 }
