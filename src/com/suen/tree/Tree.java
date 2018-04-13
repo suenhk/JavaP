@@ -1,5 +1,6 @@
 package com.suen.tree;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -51,6 +52,70 @@ public class Tree {
             return false;
         }
 
+    }
+
+    public void cengci(Node node){
+
+        ArrayDeque<Node> ad = new ArrayDeque<>();
+        if (node!=null){
+            ad.offer(node);
+            while (!ad.isEmpty()){
+                Node n = ad.poll();
+                System.out.println(n.value);
+                if (n.left!=null){
+                    ad.offer(n.left);
+                }
+                if (n.right!=null){
+                    ad.offer(n.right);
+                }
+            }
+        }
+
+    }
+
+    public void pre(Node node){
+        ArrayDeque<Node> ad = new ArrayDeque<>();
+        while (node!=null || !ad.isEmpty()){
+            while (node!=null){
+                System.out.println(node.value);
+                ad.push(node);
+                node = node.left;
+            }
+            if (!ad.isEmpty()){
+                node = ad.pop();
+                node = node.right;
+            }
+        }
+    }
+
+    public void mid(Node node){
+        ArrayDeque<Node> ad = new ArrayDeque<>();
+        while (node!=null || !ad.isEmpty()){
+            while (node!=null){
+                ad.push(node);
+                node = node.left;
+            }
+            if (!ad.isEmpty()){
+                node = ad.pop();
+                System.out.println(node.value);
+                node = node.right;
+            }
+        }
+    }
+
+    public void last(Node node){
+        ArrayDeque<Node> ad = new ArrayDeque<>();
+        while (node!=null || !ad.isEmpty()){
+            while (node!=null){
+                ad.push(node);
+                node = node.left;
+            }
+            if (!ad.isEmpty()){
+                node = ad.pop();
+                System.out.println(node.value);
+                node = node.right;
+            }
+        }
     }
 
 
