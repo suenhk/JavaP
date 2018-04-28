@@ -36,7 +36,7 @@ public class RemoveDul {
     }
 
     public static void main(String[] args){
-        int[] a = {1,2,2,3,3,3,3,4,4,5,6,7};
+        int[] a = {1,2,2,3,3,3,3,4,4};
         System.out.println(findLeft(a,3));
         System.out.println(findRight(a,3));
     }

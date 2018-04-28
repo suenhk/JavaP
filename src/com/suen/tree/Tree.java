@@ -54,6 +54,7 @@ public class Tree {
 
     }
 
+    //借助队列，而不是栈
     public void cengci(Node node){
 
         ArrayDeque<Node> ad = new ArrayDeque<>();
@@ -129,9 +130,7 @@ public class Tree {
                 }
             }
             System.out.println("----------------"+i);
-    }
-
-
+        }
     }
 
 }
